@@ -2,9 +2,10 @@ import React from 'react';
 import '../Style/Header.css';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-function Header() {
+function Header({products}) {
     return (
         <div className='header'>
             {/* Logo amazon */}
@@ -12,6 +13,7 @@ function Header() {
                 <img
                     className='header__logo'
                     src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'
+                    alt=''
                 />
             </Link>
 
@@ -50,9 +52,11 @@ function Header() {
                     </span>
                 </div>
                 <div className='header__optionBasket'>
-                    <ShoppingBasketIcon />
+                    <Link to='/checkout'>
+                        <ShoppingBasketIcon />
+                    </Link>
                     <span className='header__optionLineTwo header__basketCount'>
-                        0
+                        {products.length}
                     </span>
                 </div>
             </div>
@@ -60,4 +64,10 @@ function Header() {
     )
 }
 
-export default Header
+const mapStateToProps = state => {
+    return {
+        products: state.products
+    }
+}
+
+export default connect(mapStateToProps, null)(Header)
