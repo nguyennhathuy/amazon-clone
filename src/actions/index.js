@@ -7,3 +7,9 @@ export const addProductToBasket = (product) => {
         product
     }
 }
+
+export const removeProductFromBasket = () => {
+    return {
+        type: Types.ADD_TO_BASKET
+    }
+}

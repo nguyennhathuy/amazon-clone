@@ -53,7 +53,7 @@ function Header({products}) {
                 </div>
                 <div className='header__optionBasket'>
                     <Link to='/checkout'>
-                        <ShoppingBasketIcon />
+                        <ShoppingBasketIcon className='header__optionBasket__icon'/>
                     </Link>
                     <span className='header__optionLineTwo header__basketCount'>
                         {products.length}

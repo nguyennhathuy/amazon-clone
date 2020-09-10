@@ -25,6 +25,7 @@
 .product__info{
     height: 100px;
     margin-bottom: 15px;
+    width: 100%;
 }
 
 .product > button {
@@ -36,4 +37,8 @@
 }
 .product__infoRating{
     display: flex;
+}
+
+.product__rating {
+    color: #ffbf00;
 }
