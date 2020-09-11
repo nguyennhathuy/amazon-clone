@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../Style/Header.css';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+
 
 function Header({products}) {
     return (
