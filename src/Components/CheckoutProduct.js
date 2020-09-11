@@ -7,7 +7,6 @@ import { connect } from 'react-redux';
 import * as Actions from '../actions/index';
 
 function CheckoutProduct({ product, removeProductFromBasket }) {
-    console.log(product);
     const star = [];
     for (var i = 0; i < product.rating; i++) {
         star.push(<StarIcon className='product__rating' key={i} />);

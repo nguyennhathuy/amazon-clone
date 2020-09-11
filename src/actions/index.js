@@ -10,7 +10,7 @@ export const addProductToBasket = (product) => {
 
 export const removeProductFromBasket = (id) => {
     return {
-        type: Types.ADD_TO_BASKET,
+        type: Types.REMOVE_FROM_BASKET,
         id
     }
 }

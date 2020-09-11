@@ -5,10 +5,10 @@ var initialState = [];
 var myReducer = (state = initialState, action) => {
     switch(action.type) {
         case Types.ADD_TO_BASKET:
-            state.push(action.product);
-            return [...state];
+            return [...state, action.product];
         case Types.REMOVE_FROM_BASKET:
-            console.log('remove');
+            console.log(action);
+            console.log(state);
             return [...state];
         default:
             return [...state];
