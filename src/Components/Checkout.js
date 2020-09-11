@@ -9,7 +9,7 @@ function Checkout({products}) {
     let basketItems = [];
     if(products) {
         basketItems = products.map((product, index)=> {
-            return <CheckoutProduct key={index} id={product.id} image={product.image} title={product.title} price={product.price} rating={product.rating}/>
+            return <CheckoutProduct key={index} product={product}/>
         });
     }
     return (

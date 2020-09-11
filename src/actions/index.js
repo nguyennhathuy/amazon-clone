@@ -8,8 +8,9 @@ export const addProductToBasket = (product) => {
     }
 }
 
-export const removeProductFromBasket = () => {
+export const removeProductFromBasket = (id) => {
     return {
-        type: Types.ADD_TO_BASKET
+        type: Types.ADD_TO_BASKET,
+        id
     }
 }
